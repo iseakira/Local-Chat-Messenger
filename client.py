@@ -15,8 +15,8 @@ except socket.error as err:
 input_message = input('please write your message: ')
 
 try:
-    message = b'Sending a message to the server side'
-    sock.sendall(message)
+    
+    sock.sendall(input_message.encode())
 
     sock.settimeout(2)
 
